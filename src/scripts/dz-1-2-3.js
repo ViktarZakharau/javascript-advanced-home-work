@@ -49,7 +49,7 @@ const setObjects = new Set([
 
 /**
  * Метод получает set не уникальных объектов и делает уникальными убирая дубли.
- * @param {Set} notUniqueSet set содержащий не уникальные объекты
+ * @param {Set} notUniqueSet set содержащий не уникальные объекты.
  * @returns set содержащий уникальные объекты
  */
 const makeElementsUnique = (notUniqueSet) => {

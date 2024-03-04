@@ -31,8 +31,11 @@ async function getActivityError(url) {
  * @returns Объект {} содержащий данные по активности, который вернулся раньше всех, или ошибку запроса
  */
 async function race(arrayPromise) {
-  const response = await Promise.race(arrayPromise);
-  return response;
+  return new Promise((resolve, reject) => {
+    arrayPromise.forEach(promise => {
+      promise.then(resolve).catch(reject);
+    });
+  });
 }
 
 (async () => {

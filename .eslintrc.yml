@@ -9,3 +9,4 @@ rules:
   no-console: 0
   import/extensions: 0
   comma-dangle: ['error', 'never'] # линтер требует в конце последнего элемента в массиве запятую, пример [false, answer, correctAnswer], отключаем требование наличия после последнего элемента запятой
+ignorePatterns: ["src/scripts/dz-*", ] # игнорировать определённые файлы или каталоги
